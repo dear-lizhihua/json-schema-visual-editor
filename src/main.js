@@ -25,5 +25,6 @@ import 'ant-design-vue/dist/antd.css'
 
 const replaceAntdComponentName = value => value.replace(/^A/g, '')
 app.component(replaceAntdComponentName(Button.name), Button)
+app.component(replaceAntdComponentName(Modal.name), Modal)
 // app.use(Antd)
 app.mount('#app')
