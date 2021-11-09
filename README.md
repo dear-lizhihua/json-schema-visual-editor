@@ -1,7 +1,11 @@
-# Vue 3 + Vite
+# JSON-Schema-Editor
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 链接
 
-## Recommended IDE Setup
+- [json-schema-editor-visual](https://github.com/Open-Federation/json-schema-editor-visual)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## 任务拆解
+
+- 添加依赖
+- 编写示例
+- 编写组件

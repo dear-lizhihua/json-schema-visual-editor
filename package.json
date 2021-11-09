@@ -8,6 +8,7 @@
   },
   "module": "./dist/index.esm.js",
   "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
     "vue": "^3.2.16",
     "ant-design-vue": "^2.2.8",
     "generate-schema": "^2.6.0",
