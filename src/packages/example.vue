@@ -1,5 +1,5 @@
 <script>
-//import jeditor from './jeditor'
+import JEditor1 from './jeditor1.vue'
 const mock = [
   { name: '字符串', mock: '@string' },
   { name: '自然数', mock: '@natural' },
@@ -17,7 +17,7 @@ const mock = [
 
 //const JEditor1 = jeditor({mock: mock})
 export default {
-  // components: {JEditor1},
+  components: {JEditor1},
   setup() {
     const onChange = e => {
       console.log('changeValue', e);
@@ -48,11 +48,7 @@ export default {
     <h2>Example:</h2>
     <hr />
 
-<!--    <JEditor1
-      :showEditor="true"
-      :isMock="false"
-      @onChange="onChange"
-    />-->
+    <JEditor1 />
 
   </div>
 </template>

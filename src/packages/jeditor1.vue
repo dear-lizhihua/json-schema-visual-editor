@@ -1,21 +1,18 @@
 <script>
 import {defineComponent} from 'vue'
-// import JEditor1 from './packages/jeditor1.vue'
+import {
+  JsonSchemaVisualEditor
+} from './json-schema-visual-editor'
 
-//import { FilterFilled } from '@ant-design/icons-vue'
-//app.component(FilterFilled.displayName, FilterFilled)
-// import App from './App.vue'
 export default defineComponent({
-  // components: {App},
+  components: {JsonSchemaVisualEditor},
 })
 </script>
 
 <template>
-  <App />
+  <JsonSchemaVisualEditor />
 </template>
 
-<style scoped>
-a {
-  color: #42b983;
-}
+<style lang="scss" scoped>
+
 </style>
