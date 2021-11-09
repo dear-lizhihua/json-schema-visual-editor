@@ -3,7 +3,24 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 //import HelloWorld from './components/HelloWorld.vue'
 
-import JEditor1 from './components/JEditor1.vue'
+import jeditor from './jeditor'
+
+const mock = [
+  { name: '字符串', mock: '@string' },
+  { name: '自然数', mock: '@natural' },
+  { name: '浮点数', mock: '@float' },
+  { name: '字符', mock: '@character' },
+  { name: '布尔', mock: '@boolean' },
+  { name: 'url', mock: '@url' },
+  { name: '域名', mock: '@domain' },
+  { name: 'ip地址', mock: '@ip' },
+  { name: 'id', mock: '@id' },
+  { name: 'guid', mock: '@guid' },
+  { name: '当前时间', mock: '@now' },
+  { name: '时间戳', mock: '@timestamp' }
+];
+
+const JEditor1 = jeditor({mock: mock})
 export default {
   components: {JEditor1},
   setup() {
