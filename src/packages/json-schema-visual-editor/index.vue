@@ -4,11 +4,17 @@
       {{ localProvider('import_json') }}
     </Button>
     <Modal
+      wrapClassName="json-schema-react-editor-import-modal"
       :visible="visible"
+      :maskClosable="false"
       :title="localProvider('import_json')"
       @cancel="handleCancel"
     >
       123
+      <template #footer>
+        <Button key="back" @click="handleCancel">{{localProvider('cancel')}}</Button>
+        <Button key="submit" type="primary" @click="handleOk">{{ localProvider('ok') }}</Button>
+      </template>
     </Modal>
   </div>
 </template>
@@ -25,6 +31,7 @@ export default defineComponent({
     const visible = ref(false)
     const showModal = () => visible.value = true
     const handleCancel = () => visible.value = false
+    const handleOk = () => visible.value = false
     return {
       localProvider,
 
@@ -32,6 +39,7 @@ export default defineComponent({
       visible,
       showModal,
       handleCancel,
+      handleOk,
     }
   }
 })
