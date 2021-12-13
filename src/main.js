@@ -19,6 +19,7 @@ import {
   Modal,
   message,
   Tabs,
+  TabPane,
   AutoComplete,
 } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
@@ -26,5 +27,7 @@ import 'ant-design-vue/dist/antd.css'
 const replaceAntdComponentName = value => value.replace(/^A/g, '')
 app.component(replaceAntdComponentName(Button.name), Button)
 app.component(replaceAntdComponentName(Modal.name), Modal)
+app.component(replaceAntdComponentName(Tabs.name), Tabs)
+app.component(replaceAntdComponentName(TabPane.name), TabPane)
 // app.use(Antd)
 app.mount('#app')

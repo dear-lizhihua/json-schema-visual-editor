@@ -1,2 +1,2 @@
-import App from './App.vue'
+import App from './packages/App.vue'
 export {App}

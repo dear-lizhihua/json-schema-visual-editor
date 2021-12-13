@@ -10,7 +10,7 @@
   "dependencies": {
     "@ant-design/icons-vue": "^6.0.1",
     "vue": "^3.2.16",
-    "ant-design-vue": "^2.2.8",
+    "ant-design-vue": "^3.0.0-alpha.15",
     "generate-schema": "^2.6.0",
     "lodash-es": "^4.17.21",
     "brace": "^0.11.1"
