@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { Framework } from './framework/main/index'
+import Example from './packages/example.vue'
 
-createApp(App).mount('#app')
+const framework = new Framework()
+
+framework.register('rootVueComponent', Example)
+
+framework.start({
+  mount: {
+    mountId: '#app'
+  }
+})
