@@ -7,7 +7,7 @@
 </template>
 <script>
 import { defineComponent, onMounted, ref } from 'vue'
-import mockEditorCreator from './mock-editor'
+import editorProxy from './mock-editor'
 
 function getMode (mode) {
   const ModeMap = {
@@ -21,16 +21,16 @@ function getMode (mode) {
 }
 
 export default defineComponent({
-  props: ['mode', 'data', 'onChange'],
+  props: ['mode', 'data', 'onChange', 'readOnly', 'fullScreen'],
   setup (props) {
     const domRef = ref(null)
     onMounted(() => {
-      const mockEditor = mockEditorCreator({
+      const mockEditor = editorProxy({
         container: domRef.value,
         data: props.data,
         onChange: props.onChange,
-        // readOnly: props.readOnly,
-        // fullScreen: props.fullScreen
+        readOnly: props.readOnly,
+        fullScreen: props.fullScreen,
       })
       let mode = props.mode || 'ace/mode/javascript'
       mockEditor.editor.getSession().setMode(getMode(mode))

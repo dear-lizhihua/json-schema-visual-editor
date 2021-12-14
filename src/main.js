@@ -1,33 +1,12 @@
-import { createApp } from 'vue'
-
-// import Antd from 'ant-design-vue'
+import { Framework } from './framework/main/index'
 import Example from './packages/example.vue'
-const app = createApp(Example)
 
-// import { FilterFilled } from '@ant-design/icons-vue'
-// app.component(FilterFilled.displayName, FilterFilled)
+const framework = new Framework()
 
-import {
-  Input,
-  Row,
-  Tooltip,
-  Col,
-  Form,
-  Select,
-  Checkbox,
-  Button,
-  Modal,
-  message,
-  Tabs,
-  TabPane,
-  AutoComplete,
-} from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css'
+framework.register('rootVueComponent', Example)
 
-const replaceAntdComponentName = value => value.replace(/^A/g, '')
-app.component(replaceAntdComponentName(Button.name), Button)
-app.component(replaceAntdComponentName(Modal.name), Modal)
-app.component(replaceAntdComponentName(Tabs.name), Tabs)
-app.component(replaceAntdComponentName(TabPane.name), TabPane)
-// app.use(Antd)
-app.mount('#app')
+framework.start({
+  mount: {
+    mountId: '#app'
+  }
+})
